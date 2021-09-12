@@ -1,0 +1,30 @@
+spring:
+  application.name: merchant-service
+
+  datasource:
+    url: jdbc:h2:mem:merchantdb
+    username: sa
+    password:
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    open-in-view: false
+
+  h2.console:
+    enabled: true
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://127.0.0.1:8080/oauth2/jwks
+          issuer-uri: http://127.0.0.1:8080
+
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+
+merchant-service:
+  security:
+    client-id: some-client-id
+    client-secret: some-client-secret
