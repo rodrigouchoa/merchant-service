@@ -2,7 +2,7 @@
 
 ### How to run
 
-Just run as any regular spring boot app with gradle:
+Just run as any regular spring boot app with gradle. You will need JDK 11 or above. 
 
 ```
 ./gradlew bootRun
@@ -69,4 +69,8 @@ User Name: sa
 ### Tests 
 
 As you can see in the tests I've decided to use [Spock](https://spockframework.org/spock/docs/1.3/all_in_one.html#_getting_started). It's a groovy based test framework. Just way simpler to use than JUnit 5.
+
+```
+./gradlew test
+```
 
